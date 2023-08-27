@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Octokit } from "@octokit/core";
 
-const ACCESS_TOKEN = "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";
+const ACCESS_TOKEN = "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";
 const octokit = new Octokit({ auth: ACCESS_TOKEN });
 
 function ShowCodes(props) {
