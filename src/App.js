@@ -3,6 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import ShowCodes from './components/ShowCodes';
 
 import Counter from './components/useState'
 import EffectFunc from './components/useEffect';
@@ -10,7 +11,6 @@ import ContextFunc from './components/useContext';
 import CallbackFunc from './components/useCallback';
 
 //useReducerを作っって、適用してください
-//GitHubのAPIを使ってコードを表示してください
 
 // カスタムタブパネルコンポーネント
 function CustomTabPanel(props) {
@@ -65,15 +65,19 @@ export default function BasicTabs() {
       {/* タブパネルの内容 */}
       <CustomTabPanel value={value} index={0}>
         <Counter />
+        <ShowCodes filename="useState.jsx"/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         <EffectFunc />
+        <ShowCodes filename="useEffect.jsx"/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         <ContextFunc />
+        <ShowCodes filename="useContext.jsx"/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
         <CallbackFunc />
+        <ShowCodes filename="useCallback.jsx"/>
       </CustomTabPanel>
     </Box>
   );
