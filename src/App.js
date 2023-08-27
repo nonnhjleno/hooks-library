@@ -8,6 +8,8 @@ import Counter from './components/useState'
 import EffectFunc from './components/useEffect';
 import ContextFunc from './components/useContext';
 
+//useReducerを作っって、適用してください
+
 // カスタムタブパネルコンポーネント
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
