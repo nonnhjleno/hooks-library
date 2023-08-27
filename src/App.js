@@ -3,7 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import ShowCodes from './components/ShowCodes';
+import Redirect from './components/Redirect';
 
 import Counter from './components/useState'
 import EffectFunc from './components/useEffect';
@@ -69,27 +69,27 @@ export default function BasicTabs() {
       {/* タブパネルの内容 */}
       <CustomTabPanel value={value} index={0}>
         <Counter />
-        <ShowCodes filename="useState.jsx"/>
+        <Redirect filename="useState.jsx"/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         <EffectFunc />
-        <ShowCodes filename="useEffect.jsx"/>
+        <Redirect filename="useEffect.jsx"/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         <ContextFunc />
-        <ShowCodes filename="useContext.jsx"/>
+        <Redirect filename="useContext.jsx"/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
         <CallbackFunc />
-        <ShowCodes filename="useCallback.jsx"/>
+        <Redirect filename="useCallback.jsx"/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={4}>
         <MemoFunc />
-        <ShowCodes filename="useMemo.jsx"/>
+        <Redirect filename="useMemo.jsx"/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={5}>
         <RefFunc />
-        <ShowCodes filename="useRef.jsx"/>
+        <Redirect filename="useRef.jsx"/>
       </CustomTabPanel>
     </Box>
   );
