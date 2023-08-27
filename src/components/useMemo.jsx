@@ -1,21 +1,29 @@
-import {useRef, useState} from 'react'
+import React, { useState, useMemo } from 'react';
 
-//値が変更されるたびにinput要素がレンダリングされる
+function SumCalculator() {
+  const [number1, setNumber1] = useState(0);
+  const [number2, setNumber2] = useState(0);
 
-const MemoFunc = () => {
-  const inputEl = useRef(null);
-  const [text, setText] = useState("");
-  const handleClick = () => {
-    setText(inputEl.current.value);
-  };
-  console.log("レンダリング！！");
+  const sum = useMemo(() => {
+    console.log('Sum calculated');
+    return number1 + number2;
+  }, [number1, number2]);
+
   return (
-    <>
-      <input ref={inputEl} type="text" className='border-2 rounded'/>
-      <button onClick={handleClick} className='border-2 px-2'>set text</button>
-      <p>テキスト : {text}</p>
-    </>
+    <div>
+      <input
+        type="number"
+        value={number1}
+        onChange={e => setNumber1(Number(e.target.value))}
+      />
+      <input
+        type="number"
+        value={number2}
+        onChange={e => setNumber2(Number(e.target.value))}
+      />
+      <p>Sum: {sum}</p>
+    </div>
   );
-};
+}
 
-export default MemoFunc;
+export default SumCalculator;
