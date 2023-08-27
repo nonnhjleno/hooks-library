@@ -15,11 +15,13 @@ function SumCalculator() {
         type="number"
         value={number1}
         onChange={e => setNumber1(Number(e.target.value))}
+        className='border-2'
       />
       <input
         type="number"
         value={number2}
         onChange={e => setNumber2(Number(e.target.value))}
+        className='border-2'
       />
       <p>Sum: {sum}</p>
     </div>

@@ -9,7 +9,7 @@ const RefFunc = () => {
     console.log("レンダリング！！");
     return (
         <>
-            <input ref={inputEl} type="text" />
+            <input ref={inputEl} type="text" className='border-2'/>
             <button onClick={handleClick}>set text</button>
             <p>テキスト : {text}</p>
         </>
