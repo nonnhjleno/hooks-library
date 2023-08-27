@@ -24,7 +24,7 @@ function ShowCodes(props) {
 
   return (
     <div>
-      <pre className='mt-5 p-5 bg-slate-200'>{code}</pre>
+      <pre className='mt-5 p-5 rounded bg-slate-200'>{code}</pre>
     </div>
   );
 }
