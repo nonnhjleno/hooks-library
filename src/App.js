@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 
 import Counter from './components/useState'
 import EffectFunc from './components/useEffect';
+import ContextFunc from './components/useContext';
 
 // カスタムタブパネルコンポーネント
 function CustomTabPanel(props) {
@@ -53,7 +54,8 @@ export default function BasicTabs() {
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="useState()" {...a11yProps(0)} sx={{width: '200px'}}/>
           <Tab label="useEffect()" {...a11yProps(1)} sx={{width: '200px'}}/>
-          <Tab label="Item Three" {...a11yProps(2)} sx={{width: '200px'}}/>
+          <Tab label="useContext()" {...a11yProps(2)} sx={{width: '200px'}}/>
+          <Tab label="useContext()" {...a11yProps(3)} sx={{width: '200px'}}/>
         </Tabs>
       </Box>
       {/* タブパネルの内容 */}
@@ -64,7 +66,10 @@ export default function BasicTabs() {
         <EffectFunc />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Item Three
+        <ContextFunc />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={3}>
+        <ContextFunc />
       </CustomTabPanel>
     </Box>
   );
