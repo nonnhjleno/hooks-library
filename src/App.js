@@ -10,6 +10,7 @@ import ContextFunc from './components/useContext';
 import CallbackFunc from './components/useCallback';
 
 //useReducerを作っって、適用してください
+//GitHubのAPIを使ってコードを表示してください
 
 // カスタムタブパネルコンポーネント
 function CustomTabPanel(props) {
