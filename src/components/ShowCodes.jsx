@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Octokit } from "@octokit/core";
-import ACCESS_TOKEN from '../access_token';
+const ACCESS_TOKEN = "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";
 
 const octokit = new Octokit({ auth: ACCESS_TOKEN });
 
