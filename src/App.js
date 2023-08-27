@@ -57,7 +57,7 @@ export default function BasicTabs() {
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         {/* タブのセットアップ */}
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        <Tabs variant="scrollable" scrollButtons value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="useState()" {...a11yProps(0)} sx={{width: '200px'}}/>
           <Tab label="useEffect()" {...a11yProps(1)} sx={{width: '200px'}}/>
           <Tab label="useContext()" {...a11yProps(2)} sx={{width: '200px'}}/>
