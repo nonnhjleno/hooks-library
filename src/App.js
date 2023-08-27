@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Counter from './components/useState'
 import EffectFunc from './components/useEffect';
 import ContextFunc from './components/useContext';
+import CallbackFunc from './components/useCallback';
 
 //useReducerを作っって、適用してください
 
@@ -57,7 +58,7 @@ export default function BasicTabs() {
           <Tab label="useState()" {...a11yProps(0)} sx={{width: '200px'}}/>
           <Tab label="useEffect()" {...a11yProps(1)} sx={{width: '200px'}}/>
           <Tab label="useContext()" {...a11yProps(2)} sx={{width: '200px'}}/>
-          <Tab label="useContext()" {...a11yProps(3)} sx={{width: '200px'}}/>
+          <Tab label="useCallback()" {...a11yProps(3)} sx={{width: '200px'}}/>
         </Tabs>
       </Box>
       {/* タブパネルの内容 */}
@@ -71,7 +72,7 @@ export default function BasicTabs() {
         <ContextFunc />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
-        <ContextFunc />
+        <CallbackFunc />
       </CustomTabPanel>
     </Box>
   );
