@@ -12,8 +12,7 @@ import CallbackFunc from './components/useCallback';
 import MemoFunc from './components/useMemo';
 import RefFunc from './components/useRef';
 import ReducerFunc from './components/useReducer';
-
-//useReducerを作っって、適用してください
+import FormFunc from './components/useForm';
 
 // カスタムタブパネルコンポーネント
 function CustomTabPanel(props) {
@@ -65,7 +64,8 @@ export default function BasicTabs() {
           <Tab label="useCallback()" {...a11yProps(3)} sx={{width: '200px'}}/>
           <Tab label="useMemo()" {...a11yProps(4)} sx={{width: '200px'}}/>
           <Tab label="useRef()" {...a11yProps(5)} sx={{width: '200px'}}/>
-          <Tab label="useRef()" {...a11yProps(6)} sx={{width: '200px'}}/>
+          <Tab label="useReducer()" {...a11yProps(6)} sx={{width: '200px'}}/>
+          <Tab label="useForm()" {...a11yProps(7)} sx={{width: '200px'}}/>
         </Tabs>
       </Box>
       {/* タブパネルの内容 */}
@@ -96,6 +96,10 @@ export default function BasicTabs() {
       <CustomTabPanel value={value} index={6}>
         <ReducerFunc />
         <Redirect filename="useRef.jsx"/>
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={7}>
+        <FormFunc />
+        <Redirect filename="useForm.jsx"/>
       </CustomTabPanel>
     </Box>
   );
